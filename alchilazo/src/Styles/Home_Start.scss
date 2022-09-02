@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+//Fonts
+$default-font: 'Source Sans Pro', sans-serif;
+//Colors
+$PrimaryColor: #F2464B;
+$PrimaryHover: #d13e43;
+$primaryTextColor: #F6E1E0;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: $default-font;
+}
+
+#main-title{
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    font-size: 3em;
+    height: 98px;
+    width: 100vw;
+    margin: 0;
+    background-color: $PrimaryColor;
+    color: $primaryTextColor;
+}
+
+#logo{
+    max-height: 300px;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+    place-self: center;
+    z-index: -1;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: 10% 50% 50%;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.button-container{
+    display: grid;
+    place-items: center;
+    grid-template-rows:  repeat(2,30%);
+}
+
+.primary-button{
+    overflow: hidden;
+    height: 70px;
+    width: 300px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: $PrimaryColor;
+    font-family: $default-font;
+    color: $primaryTextColor;
+    &:hover{
+        cursor: pointer;
+        background-color: $PrimaryHover;
+        font-size: 1.8em;
+        transition: 250ms ease-in-out;
+        height: 75px;
+        width: 305px;
+    }
+}
+
+
+//Media queries
+
+@media only screen and (max-width: 313px){
+    .primary-button{
+        height: 65px;
+        width: 250px;
+        font-size: 1.1em;
+    }
+    #logo{
+        max-height: 250px;
+        min-width: 150px;
+        
+    }
+    
+}
+
